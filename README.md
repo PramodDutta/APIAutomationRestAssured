@@ -14,3 +14,13 @@ API Automation Framework with the CRUD of Restful Booker
 6. Allure Report
 7. Full Folder Structure(Hybrid) Framework.
 8. Jenkins File
+
+
+Run
+
+## Basic Create Test
+mvn clean test 
+
+## Basic Integration Test
+
+ mvn clean test -DsuiteXmlFile=testng-integration.xml
