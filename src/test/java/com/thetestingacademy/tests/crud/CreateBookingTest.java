@@ -11,6 +11,8 @@ import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hamcrest.Matchers;
 import org.testng.ITestContext;
 import org.testng.annotations.Test;
@@ -18,12 +20,15 @@ import org.testng.annotations.Test;
 public class CreateBookingTest extends BaseTest {
 
 
+    private static final Logger log = LogManager.getLogger(CreateBookingTest.class);
+    ;
+
     @Test
     @Owner("Promode")
     @Severity(SeverityLevel.NORMAL)
     @Description("Verify that the Booking can be Created")
     public void testCreateBooking() throws JsonProcessingException {
-            requestSpecification.basePath(APIConstants.CREATE_BOOKING);
+        requestSpecification.basePath(APIConstants.CREATE_BOOKING);
 
         Response response = RestAssured.given().spec(requestSpecification)
                 .when().body(payloadManager.createPayload()).post();
@@ -31,9 +36,9 @@ public class CreateBookingTest extends BaseTest {
         jsonPath = JsonPath.from(response.asString());
         System.out.println("Booking Id :" + jsonPath.getString("bookingid"));
         validatableResponse.statusCode(200);
+        log.error("TestDone");
+
     }
-
-
 
 
 }
