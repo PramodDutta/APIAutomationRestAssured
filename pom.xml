@@ -89,6 +89,13 @@
         <scope>compile</scope> <!-- CHANGE HERE -->
     </dependency>
 
+    
+    <dependency>
+    <groupId>org.glassfish.gmbal</groupId>
+    <artifactId>gmbal</artifactId>
+    <version>4.0.3</version>
+</dependency>
+
 
   </dependencies>
 
