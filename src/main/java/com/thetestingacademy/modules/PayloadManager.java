@@ -2,8 +2,8 @@ package com.thetestingacademy.modules;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.thetestingacademy.payloads.Booking;
-import com.thetestingacademy.payloads.Bookingdates;
+import com.thetestingacademy.payloads.pojos.Booking;
+import com.thetestingacademy.payloads.pojos.Bookingdates;
 
 public class PayloadManager {
 

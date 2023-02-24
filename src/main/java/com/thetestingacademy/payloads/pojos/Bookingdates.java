@@ -1,4 +1,4 @@
-package com.thetestingacademy.payloads;
+package com.thetestingacademy.payloads.pojos;
 
 import javax.annotation.Generated;
 import com.fasterxml.jackson.annotation.JsonInclude;
