@@ -1,0 +1,31 @@
+stages:
+  - clean
+  - build
+  - deploy
+
+clean build:
+  image: maven:3.8-openjdk-11
+  stage: clean
+  script:
+    - mvn clean
+
+run api test:
+  image: maven:3.8-openjdk-11
+  stage: build
+  script:
+    - mvn test -Dsurefire.suiteXmlFiles=testng.xml
+  artifacts:
+    paths: 
+    - allure-results
+
+
+reports deployed to s3:
+  stage: deploy
+  image: 
+      name: amazon/aws-cli:2.4.11
+      entrypoint: [""]
+  script:
+        - aws --version
+        - pwd
+        - aws s3 sync allure-results s3://$AWS_S3_BUCKET --delete
+
