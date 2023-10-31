@@ -4,6 +4,10 @@ API Automation Framework with the CRUD of Restful Booker
 
 `mvn test -Dsurefire.suiteXmlFiles=testng.xml`
 
+<img width="1130" alt="Screenshot 2023-10-31 at 12 25 55 PM" src="https://github.com/PramodDutta/APIAutomationRestAssured/assets/1409610/69f398b3-8798-4fba-a091-3b1e321dcc7d">
+
+
+
 ## Tech Stack 
 
 1. Rest Assured
@@ -14,6 +18,8 @@ API Automation Framework with the CRUD of Restful Booker
 6. Allure Report
 7. Full Folder Structure(Hybrid) Framework.
 8. Jenkins File
+
+<img width="1262" alt="Screenshot 2023-10-31 at 12 26 07 PM" src="https://github.com/PramodDutta/APIAutomationRestAssured/assets/1409610/2d58bf82-0ffb-4fcb-a2d9-cf26920fa7b5">
 
 
 Run
